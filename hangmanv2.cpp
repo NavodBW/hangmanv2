@@ -5,6 +5,9 @@
 #include <random>
 #include <algorithm>
 #include <cctype>
+#include <windows.h>
+#include <exdisp.h>
+#include <comdef.h>
 
 const int MAX_INCORRECT_GUESSES = 6; // maximum number of incorrect guesses allowed
 
@@ -129,6 +132,20 @@ int main(){
     if (numIncorrectGuesses == MAX_INCORRECT_GUESSES)
     {
       std::cout << "You lost :( The secret word was: " << secretWord << std::endl;
+    }
+    
+    // Ask the player if they want to search the meaning of the secret word on Google
+    std::cout << "Do you want to search the meaning of the secret word on Google? (y/n) ";
+    char search;
+    std::cin >> search;
+
+    if (search == 'y')
+    {
+      // Create a URL to search Google for the secret word
+      std::string searchURL = "https://www.google.com/search?q=define+" + secretWord;
+
+      // Open the URL in the default web browser
+      std::system(("start " + searchURL).c_str());
     }
 
     // Ask the player if they want to play again
