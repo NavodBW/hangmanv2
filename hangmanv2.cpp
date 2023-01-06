@@ -87,6 +87,13 @@ int main(){
     // Convert the guess to lowercase
     guess = tolower(guess);
 
+    // Validate that the guess is an alphabetical letter
+    if (!isalpha(guess))
+    {
+      std::cout << "Error: Please enter an alphabetical letter." << std::endl;
+      continue;
+    }
+
     // Check if the guess is correct
     if (std::find(secretWord.begin(), secretWord.end(), guess) != secretWord.end())
     {
