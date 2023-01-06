@@ -2,7 +2,7 @@
   
 **IMPROVEMENTS:**
 
- - Instead of asking the user for the secret word, the game radomly selects a word that is longer than 3 letters from a text file. (text
+ - Instead of asking the user for the secret word, the game randomly selects a word that is longer than 3 letters from a text file. (text
    file obtained from: https://github.com/dwyl/english-words)
    
   - Uses [mersenne_twister_engine](https://en.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine) 
