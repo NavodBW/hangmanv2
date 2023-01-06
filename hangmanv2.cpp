@@ -116,5 +116,7 @@ int main(){
     std::cout << "You lost :( The secret word was: " << secretWord << std::endl;
   }
 
-  return 0;
+system("pause");
+return 0;
+
 }
