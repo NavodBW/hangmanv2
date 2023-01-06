@@ -26,11 +26,11 @@ int main(){
   std::string word;
   while (dictionaryFile >> word)
   {
-    if (word.length() > 3) // only add words that are more than 3 characters
-    {
-      words.push_back(word);
+    if (word.length() > 3 && word.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == std::string::npos)
+      {
+        words.push_back(word);
+      }
     }
-  }
 
   // Close the dictionary file
   dictionaryFile.close();
