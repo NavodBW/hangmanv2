@@ -1,0 +1,2 @@
+An improved version of the hangman game where instead of asking the user for the secret word, the game radomly selects a word that is longer than 3 letters from a text file.
+Uses mersenne_twister_engine (https://en.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine) to genarate a random number and select a word from the text.
