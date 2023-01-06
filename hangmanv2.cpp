@@ -8,6 +8,8 @@
 const int MAX_INCORRECT_GUESSES = 6; // maximum number of incorrect guesses allowed
 
 int main(){
+  while(true)
+  {
 
   // Open the dictionary file
   std::ifstream dictionaryFile("dictionary.txt");
@@ -114,6 +116,16 @@ int main(){
   if (numIncorrectGuesses == MAX_INCORRECT_GUESSES)
   {
     std::cout << "You lost :( The secret word was: " << secretWord << std::endl;
+  }
+
+  // Ask the player if they want to start a new game or quit
+  std::cout << "Play again? (y/n) ";
+  char playAgain;
+  std::cin >> playAgain;
+  if (playAgain == 'n')
+  {
+    break;
+  }
   }
 
 system("pause");
