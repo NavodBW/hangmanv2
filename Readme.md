@@ -5,4 +5,5 @@ IMPROVEMENTS:
 -Uses mersenne_twister_engine (https://en.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine) to genarate a random number and select a word from the text.
 -Implemented input validation where the game converts the input into lowercase, only allows single alphabetical characters.
 -Ignores the words with numbers or special chars in the text file 
+-The game now offers to search google for the meaning of each word after each game
 
