@@ -4,6 +4,7 @@
 #include <fstream>
 #include <random>
 #include <algorithm>
+#include <cctype>
 
 const int MAX_INCORRECT_GUESSES = 6; // maximum number of incorrect guesses allowed
 
@@ -26,7 +27,8 @@ int main(){
   std::string word;
   while (dictionaryFile >> word)
   {
-    if (word.length() > 3 && word.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == std::string::npos)
+    if (word.length() > 3 && std::all_of(word.begin(), word.end(), isalpha))
+
       {
         words.push_back(word);
       }
