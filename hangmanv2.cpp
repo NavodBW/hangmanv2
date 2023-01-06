@@ -84,6 +84,9 @@ int main(){
     char guess;
     std::cin >> guess;
 
+    // Convert the guess to lowercase
+    guess = tolower(guess);
+
     // Check if the guess is correct
     if (std::find(secretWord.begin(), secretWord.end(), guess) != secretWord.end())
     {
