@@ -1,4 +1,4 @@
-## An improved version of my [original hangman game](%28https://github.com/NavodBW/hangman-cpp%29) 
+## An improved version of my [original hangman game](https://github.com/NavodBW/hangman-cpp) 
   
 **IMPROVEMENTS:**
 
